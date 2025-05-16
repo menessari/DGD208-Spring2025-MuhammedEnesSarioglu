@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Item.cs" />
+    <Compile Include="ItemDatabase.cs" />
+    <Compile Include="ItemType.cs" />
+    <Compile Include="Menu.cs" />
+    <Compile Include="PetStat.cs" />
+    <Compile Include="PetType.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
