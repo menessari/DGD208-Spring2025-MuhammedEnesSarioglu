@@ -11,238 +11,228 @@ namespace Assignment_MuhammedEnesSarioglu_225040068
     {
         public static List<Item> AllItems = new List<Item>
     {
-        // Foods
+        // Tavuk ve Kaz
         new Item {
-            Name = "Kibble",
+            Name = "Mısır",
             Type = ItemType.Food,
-            CompatibleWith = new List<PetType> { PetType.Dog },
+            CompatibleWith = new List<PetType> { PetType.Tavuk, PetType.Kaz },
             AffectedStat = PetStat.Hunger,
-            EffectAmount = 15,
-            Duration = 2.5f  // Takes 2.5 seconds to eat
+            EffectAmount = 10,
+            Duration = 1.0f,
+            Price = 25
         },
         new Item {
-            Name = "Premium Dog Food",
+            Name = "Arpa ve Tahıllı Özel Yem",
             Type = ItemType.Food,
-            CompatibleWith = new List<PetType> { PetType.Dog },
-            AffectedStat = PetStat.Hunger,
-            EffectAmount = 30,
-            Duration = 3.0f  // Takes 3 seconds to eat
-        },
-        new Item {
-            Name = "Cat Food",
-            Type = ItemType.Food,
-            CompatibleWith = new List<PetType> { PetType.Cat },
-            AffectedStat = PetStat.Hunger,
-            EffectAmount = 15,
-            Duration = 2.0f
-        },
-        new Item {
-            Name = "Tuna Treat",
-            Type = ItemType.Food,
-            CompatibleWith = new List<PetType> { PetType.Cat },
+            CompatibleWith = new List<PetType> { PetType.Tavuk, PetType.Kaz },
             AffectedStat = PetStat.Hunger,
             EffectAmount = 25,
-            Duration = 1.5f  // Quick treat
+            Duration = 1.0f,
+            Price = 55
         },
         new Item {
-            Name = "Bird Seed",
-            Type = ItemType.Food,
-            CompatibleWith = new List<PetType> { PetType.Bird },
-            AffectedStat = PetStat.Hunger,
+            Name = "Top",
+            Type = ItemType.Toy,
+            CompatibleWith = new List<PetType> { PetType.Tavuk, PetType.Kaz },
+            AffectedStat = PetStat.Fun,
             EffectAmount = 10,
-            Duration = 1.0f
+            Duration = 1.0f,
+            Price = 25
         },
         new Item {
-            Name = "Fruit Mix",
-            Type = ItemType.Food,
-            CompatibleWith = new List<PetType> { PetType.Bird },
-            AffectedStat = PetStat.Hunger,
-            EffectAmount = 20,
-            Duration = 2.0f
-        },
-        new Item {
-            Name = "Fish Flakes",
-            Type = ItemType.Food,
-            CompatibleWith = new List<PetType> { PetType.Fish },
-            AffectedStat = PetStat.Hunger,
-            EffectAmount = 10,
-            Duration = 0.5f  // Very quick to consume
-        },
-        new Item {
-            Name = "Premium Fish Pellets",
-            Type = ItemType.Food,
-            CompatibleWith = new List<PetType> { PetType.Fish },
-            AffectedStat = PetStat.Hunger,
-            EffectAmount = 20,
-            Duration = 1.0f
-        },
-        new Item {
-            Name = "Carrots",
-            Type = ItemType.Food,
-            CompatibleWith = new List<PetType> { PetType.Rabbit },
-            AffectedStat = PetStat.Hunger,
-            EffectAmount = 15,
-            Duration = 3.0f  // Takes time to chew
-        },
-        new Item {
-            Name = "Leafy Greens",
-            Type = ItemType.Food,
-            CompatibleWith = new List<PetType> { PetType.Rabbit },
-            AffectedStat = PetStat.Hunger,
+            Name = "Sesli Oyuncak Civciv",
+            Type = ItemType.Toy,
+            CompatibleWith = new List<PetType> { PetType.Tavuk, PetType.Kaz },
+            AffectedStat = PetStat.Fun,
             EffectAmount = 25,
-            Duration = 4.0f  // Lots to munch through
+            Duration = 1.0f,
+            Price = 55
         },
-        
-        // Universal Foods
         new Item {
-            Name = "Vitamin Treat",
-            Type = ItemType.Food,
-            CompatibleWith = new List<PetType> { PetType.Dog, PetType.Cat, PetType.Rabbit },
-            AffectedStat = PetStat.Hunger,
+            Name = "Tahta Kümes",
+            Type = ItemType.Energy,
+            CompatibleWith = new List<PetType> { PetType.Tavuk, PetType.Kaz },
+            AffectedStat = PetStat.Sleep,
             EffectAmount = 10,
-            Duration = 1.0f  // Quick treat
-        },
-            new Item {
-                Name = "Gourmet Dinner",
-                Type = ItemType.Food,
-                CompatibleWith = new List<PetType> { PetType.Dog, PetType.Cat },
-                AffectedStat = PetStat.Hunger,
-                EffectAmount = 40,
-                Duration = 5.0f  // Fancy meal takes time
-        },
-        
-        // Toys
-        new Item {
-            Name = "Tennis Ball",
-            Type = ItemType.Toy,
-            CompatibleWith = new List<PetType> { PetType.Dog },
-            AffectedStat = PetStat.Fun,
-            EffectAmount = 20,
-            Duration = 4.0f  // Playing fetch takes time
+            Duration = 2.0f,
+            Price = 25
         },
         new Item {
-            Name = "Squeaky Toy",
-            Type = ItemType.Toy,
-            CompatibleWith = new List<PetType> { PetType.Dog },
-            AffectedStat = PetStat.Fun,
-            EffectAmount = 15,
-            Duration = 2.5f
-        },
-        new Item {
-            Name = "String Toy",
-            Type = ItemType.Toy,
-            CompatibleWith = new List<PetType> { PetType.Cat },
-            AffectedStat = PetStat.Fun,
-            EffectAmount = 20,
-            Duration = 3.0f  // Playing with string
-        },
-        new Item {
-            Name = "Toy Mouse",
-            Type = ItemType.Toy,
-            CompatibleWith = new List<PetType> { PetType.Cat },
-            AffectedStat = PetStat.Fun,
-            EffectAmount = 15,
-            Duration = 2.0f
-        },
-        new Item {
-            Name = "Swing",
-            Type = ItemType.Toy,
-            CompatibleWith = new List<PetType> { PetType.Bird },
-            AffectedStat = PetStat.Fun,
-            EffectAmount = 15,
-            Duration = 3.0f  // Swinging
-        },
-        new Item {
-            Name = "Bell",
-            Type = ItemType.Toy,
-            CompatibleWith = new List<PetType> { PetType.Bird },
-            AffectedStat = PetStat.Fun,
-            EffectAmount = 10,
-            Duration = 1.5f
-        },
-        new Item {
-            Name = "Bubbler",
-            Type = ItemType.Toy,
-            CompatibleWith = new List<PetType> { PetType.Fish },
-            AffectedStat = PetStat.Fun,
-            EffectAmount = 10,
-            Duration = 2.0f  // Watching bubbles
-        },
-        new Item {
-            Name = "Water Plant",
-            Type = ItemType.Toy,
-            CompatibleWith = new List<PetType> { PetType.Fish },
-            AffectedStat = PetStat.Fun,
-            EffectAmount = 15,
-            Duration = 1.5f
-        },
-        new Item {
-            Name = "Chew Toy",
-            Type = ItemType.Toy,
-            CompatibleWith = new List<PetType> { PetType.Rabbit },
-            AffectedStat = PetStat.Fun,
-            EffectAmount = 15,
-            Duration = 3.5f  // Lots of chewing
-        },
-        new Item {
-            Name = "Tunnel",
-            Type = ItemType.Toy,
-            CompatibleWith = new List<PetType> { PetType.Rabbit },
-            AffectedStat = PetStat.Fun,
-            EffectAmount = 20,
-            Duration = 4.0f  // Running through tunnels
-        },
-        
-        // Universal Toys
-        new Item {
-            Name = "Ball",
-            Type = ItemType.Toy,
-            CompatibleWith = new List<PetType> { PetType.Dog, PetType.Cat, PetType.Rabbit },
-            AffectedStat = PetStat.Fun,
-            EffectAmount = 10,
-            Duration = 2.0f
+            Name = "Tüylü Kümes",
+            Type = ItemType.Energy,
+            CompatibleWith = new List<PetType> { PetType.Tavuk, PetType.Kaz },
+            AffectedStat = PetStat.Sleep,
+            EffectAmount = 25,
+            Duration = 2.0f,
+            Price = 55
         },
 
-            // Sleep Items
+        // Koyun ve İnek
         new Item {
-            Name = "Comfy Bed",
-            Type = ItemType.Toy,
-            CompatibleWith = new List<PetType> { PetType.Dog, PetType.Cat },
-            AffectedStat = PetStat.Sleep,
-            EffectAmount = 30,
-            Duration = 6.0f  // Takes time to fall asleep
+            Name = "Ot",
+            Type = ItemType.Food,
+            CompatibleWith = new List<PetType> { PetType.Koyun, PetType.Inek },
+            AffectedStat = PetStat.Hunger,
+            EffectAmount = 10,
+            Duration = 1.0f,
+            Price = 40
         },
         new Item {
-            Name = "Pet Blanket",
-            Type = ItemType.Toy,
-            CompatibleWith = new List<PetType> { PetType.Dog, PetType.Cat, PetType.Rabbit },
-            AffectedStat = PetStat.Sleep,
-            EffectAmount = 20,
-            Duration = 4.0f
+            Name = "Premium Saman",
+            Type = ItemType.Food,
+            CompatibleWith = new List<PetType> { PetType.Koyun, PetType.Inek },
+            AffectedStat = PetStat.Hunger,
+            EffectAmount = 25,
+            Duration = 1.0f,
+            Price = 95
         },
-            new Item {
-                Name = "Perch",
-                Type = ItemType.Toy,
-            CompatibleWith = new List<PetType> { PetType.Bird },
+        new Item {
+            Name = "Çarkıfelek",
+            Type = ItemType.Toy,
+            CompatibleWith = new List<PetType> { PetType.Koyun, PetType.Inek },
+            AffectedStat = PetStat.Fun,
+            EffectAmount = 10,
+            Duration = 1.0f,
+            Price = 40
+        },
+        new Item {
+            Name = "Çit Süsü",
+            Type = ItemType.Toy,
+            CompatibleWith = new List<PetType> { PetType.Koyun, PetType.Inek },
+            AffectedStat = PetStat.Fun,
+            EffectAmount = 25,
+            Duration = 1.0f,
+            Price = 95
+        },
+        new Item {
+            Name = "Ağaç Altı Uyku",
+            Type = ItemType.Energy,
+            CompatibleWith = new List<PetType> { PetType.Koyun, PetType.Inek },
+            AffectedStat = PetStat.Sleep,
+            EffectAmount = 10,
+            Duration = 2.0f,
+            Price = 40
+        },
+        new Item {
+            Name = "Premium Hizmetli Çiftlik",
+            Type = ItemType.Energy,
+            CompatibleWith = new List<PetType> { PetType.Koyun, PetType.Inek },
             AffectedStat = PetStat.Sleep,
             EffectAmount = 25,
-            Duration = 3.0f
+            Duration = 2.0f,
+            Price = 95
+        },
+
+        // Arı
+        new Item {
+            Name = "Mezarlık Çiçeği",
+            Type = ItemType.Food,
+            CompatibleWith = new List<PetType> { PetType.Ari },
+            AffectedStat = PetStat.Hunger,
+            EffectAmount = 10,
+            Duration = 1.0f,
+            Price = 100
         },
         new Item {
-            Name = "Cave Decoration",
-            Type = ItemType.Toy,
-            CompatibleWith = new List<PetType> { PetType.Fish },
-            AffectedStat = PetStat.Sleep,
-            EffectAmount = 15,
-            Duration = 2.0f
+            Name = "Villa Bahçesi",
+            Type = ItemType.Food,
+            CompatibleWith = new List<PetType> { PetType.Ari },
+            AffectedStat = PetStat.Hunger,
+            EffectAmount = 25,
+            Duration = 1.0f,
+            Price = 225
         },
-            new Item {
-                Name = "Hideaway",
-                Type = ItemType.Toy,
-            CompatibleWith = new List<PetType> { PetType.Rabbit },
+        new Item {
+            Name = "Saklambaç",
+            Type = ItemType.Toy,
+            CompatibleWith = new List<PetType> { PetType.Ari },
+            AffectedStat = PetStat.Fun,
+            EffectAmount = 10,
+            Duration = 1.0f,
+            Price = 100
+        },
+        new Item {
+            Name = "Bal Havuzu",
+            Type = ItemType.Toy,
+            CompatibleWith = new List<PetType> { PetType.Ari },
+            AffectedStat = PetStat.Fun,
+            EffectAmount = 25,
+            Duration = 1.0f,
+            Price = 225
+        },
+        new Item {
+            Name = "Tek Kişilik Oda",
+            Type = ItemType.Energy,
+            CompatibleWith = new List<PetType> { PetType.Ari },
+            AffectedStat = PetStat.Sleep,
+            EffectAmount = 10,
+            Duration = 2.0f,
+            Price = 100
+        },
+        new Item {
+            Name = "Ballarla Süslenmiş Balayı Odası",
+            Type = ItemType.Energy,
+            CompatibleWith = new List<PetType> { PetType.Ari },
             AffectedStat = PetStat.Sleep,
             EffectAmount = 25,
-            Duration = 5.0f  // Takes time to get comfortable
+            Duration = 2.0f,
+            Price = 225
+        },
+
+        // Deve Kuşu
+        new Item {
+            Name = "Böcek",
+            Type = ItemType.Food,
+            CompatibleWith = new List<PetType> { PetType.DeveKusu },
+            AffectedStat = PetStat.Hunger,
+            EffectAmount = 10,
+            Duration = 1.0f,
+            Price = 200
+        },
+        new Item {
+            Name = "Güçlendirilmiş Besin Paketi",
+            Type = ItemType.Food,
+            CompatibleWith = new List<PetType> { PetType.DeveKusu },
+            AffectedStat = PetStat.Hunger,
+            EffectAmount = 25,
+            Duration = 1.0f,
+            Price = 475
+        },
+        new Item {
+            Name = "Devasa Top",
+            Type = ItemType.Toy,
+            CompatibleWith = new List<PetType> { PetType.DeveKusu },
+            AffectedStat = PetStat.Fun,
+            EffectAmount = 10,
+            Duration = 1.0f,
+            Price = 200
+        },
+        new Item {
+            Name = "Kayış",
+            Type = ItemType.Toy,
+            CompatibleWith = new List<PetType> { PetType.DeveKusu },
+            AffectedStat = PetStat.Fun,
+            EffectAmount = 25,
+            Duration = 1.0f,
+            Price = 475
+        },
+        new Item {
+            Name = "Kum",
+            Type = ItemType.Energy,
+            CompatibleWith = new List<PetType> { PetType.DeveKusu },
+            AffectedStat = PetStat.Sleep,
+            EffectAmount = 10,
+            Duration = 2.0f,
+            Price = 200
+        },
+        new Item {
+            Name = "Diamond Elite Platinum Plus Oda",
+            Type = ItemType.Energy,
+            CompatibleWith = new List<PetType> { PetType.DeveKusu },
+            AffectedStat = PetStat.Sleep,
+            EffectAmount = 25,
+            Duration = 2.0f,
+            Price = 475
         }
     };
     }

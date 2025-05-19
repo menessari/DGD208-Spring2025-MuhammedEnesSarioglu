@@ -8,10 +8,11 @@ namespace Assignment_MuhammedEnesSarioglu_225040068
 {
     public enum PetType
     {
-        Dog,
-        Cat,
-        Bird,
-        Fish,
-        Rabbit
+        Tavuk,
+        Kaz,
+        Koyun,
+        Inek,
+        Ari,
+        DeveKusu
     }
 }

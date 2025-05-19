@@ -24,7 +24,12 @@ namespace Assignment_MuhammedEnesSarioglu_225040068
         // How much it affects
         public int EffectAmount { get; set; }
 
-        // How long it takes for the item to be used (you should use async to implement this
+        // How long it takes for the item to be used
         public float Duration { get; set; }
+
+        // Para birimi
+        public int Price { get; set; }
+
+        public Item() { }
     }
 }

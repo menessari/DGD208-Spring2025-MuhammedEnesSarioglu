@@ -9,6 +9,7 @@ namespace Assignment_MuhammedEnesSarioglu_225040068
     public enum ItemType
     {
         Food,
-        Toy
+        Toy,
+        Energy
     }
 }
