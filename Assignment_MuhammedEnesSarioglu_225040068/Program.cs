@@ -1,69 +1,32 @@
-﻿using System;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
+
+using Assignment_MuhammedEnesSarioglu_225040068;
 
 public class Program
 {
-    private bool _isRunning;
-
     public static async Task Main(string[] args)
     {
-        // Program sınıfından bir örnek oluşturup GameLoop'u çalıştırıyoruz
-        Program program = new Program();
-        await program.GameLoop();
-    }
-
-    public async Task GameLoop()
-    {
-        // Initialize the game
-        Initialize();
-
-        // Main game loop
-        _isRunning = true;
-        while (_isRunning)
+        OyunTemel oyun = new OyunTemel();
+        while (true)
         {
-            // Display menu and get player input
-            string userChoice = GetUserInput();
+            Console.Clear();
+            Console.WriteLine("Ana Menü");
+            Console.WriteLine("1. Yeni Oyun");
+            Console.WriteLine("2. Save Dosyasını Yükle");
+            Console.WriteLine("3. Credits");
+            Console.WriteLine("4. Çıkış");
+            Console.Write("Seçim: ");
+            string secim = Console.ReadLine();
 
-            // Process the player's choice
-            await ProcessUserChoice(userChoice);
+            if (secim == "1") await oyun.YeniOyun();
+            else if (secim == "2") await oyun.KayitliOyunuYukle();
+            else if (secim == "3") Console.WriteLine("Hazırlayan: Muhammed Enes Sarıoğlu - 225040068 Devam etmek için bir tuşa basın."); 
+            else if (secim == "4") break;
+            Console.ReadKey();
         }
-
-        Console.WriteLine("Thanks for playing!");
-    }
-
-    private void Initialize()
-    {
-        // Use this to initialize the game
-        Console.WriteLine("Welcome to the Pet Simulator!");
-    }
-
-    private string GetUserInput()
-    {
-        // Display a simple menu and get user input
-        Console.WriteLine("Menu:");
-        Console.WriteLine("1. Credits");
-        Console.WriteLine("2. Exit the game");
-        Console.Write("Enter your choice: ");
-        return Console.ReadLine();
-    }
-
-    private async Task ProcessUserChoice(string choice)
-    {
-        switch (choice)
-        {
-            case "1":
-                Console.WriteLine("Created by: Muhammed Enes Sarıoğlu, Student No: 225040068");
-                break;
-            case "2":
-                Console.WriteLine("Exiting the game...");
-                _isRunning = false;
-                break;
-            default:
-                Console.WriteLine("Invalid choice. Please try again.");
-                break;
-        }
-
-        // Simulate a short delay (e.g., for item usage later)
-        await Task.Delay(500);
     }
 }
