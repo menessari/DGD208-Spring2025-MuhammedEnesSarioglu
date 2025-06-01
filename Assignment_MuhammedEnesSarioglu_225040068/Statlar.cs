@@ -1,20 +1,17 @@
 ﻿
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-
-using Assignment_MuhammedEnesSarioglu_225040068;
 
 public class Statlar
 {
     private HayvanYonetme hayvanYonetme;
+    private Ozellik ozellik;
     private bool calisiyor = false;
 
-    public Statlar(HayvanYonetme yonet)
+    public Statlar(HayvanYonetme yonet, Ozellik ozellik)
     {
         hayvanYonetme = yonet;
+        this.ozellik = ozellik;
     }
 
     public async Task Baslat()
@@ -23,6 +20,7 @@ public class Statlar
         while (calisiyor)
         {
             hayvanYonetme.StatlariAzalt();
+            ozellik.Para += hayvanYonetme.GelirTopla();
             await Task.Delay(5000);
         }
     }

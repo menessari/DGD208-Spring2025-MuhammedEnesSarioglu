@@ -51,6 +51,7 @@
     <Compile Include="Item.cs" />
     <Compile Include="ItemDatabase.cs" />
     <Compile Include="ItemType.cs" />
+    <Compile Include="Kumarhane.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="OyunTemel.cs" />
     <Compile Include="Ozellik.cs" />

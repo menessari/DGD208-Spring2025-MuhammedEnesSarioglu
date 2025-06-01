@@ -2,10 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Assignment_MuhammedEnesSarioglu_225040068;
 
 public class HayvanYonetme
 {
@@ -41,5 +37,15 @@ public class HayvanYonetme
                 hayvanlar.Remove(h);
             }
         }
+    }
+
+    public int GelirTopla()
+    {
+        int toplam = 0;
+        foreach (var h in hayvanlar)
+        {
+            if (h.CanliMi()) toplam += h.GelirMiktari;
+        }
+        return toplam;
     }
 }
