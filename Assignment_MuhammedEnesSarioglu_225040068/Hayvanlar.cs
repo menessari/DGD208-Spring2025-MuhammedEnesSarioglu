@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 using Assignment_MuhammedEnesSarioglu_225040068;
 
 public class Hayvan
@@ -13,14 +8,16 @@ public class Hayvan
     public int Hunger { get; set; }
     public int Sleep { get; set; }
     public int Fun { get; set; }
+    public int GelirMiktari { get; set; }
 
-    public Hayvan(string isim, PetType tur)
+    public Hayvan(string isim, PetType tur, int gelir)
     {
         Isim = isim;
         Tur = tur;
         Hunger = 50;
         Sleep = 50;
         Fun = 50;
+        GelirMiktari = gelir;
     }
 
     public bool CanliMi()
