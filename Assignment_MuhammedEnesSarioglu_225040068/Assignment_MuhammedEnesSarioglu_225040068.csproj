@@ -47,12 +47,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Hayvanlar.cs" />
+    <Compile Include="HayvanSatinAl.cs" />
     <Compile Include="HayvanYonetme.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="ItemDatabase.cs" />
     <Compile Include="ItemType.cs" />
     <Compile Include="Kumarhane.cs" />
+    <Compile Include="MarketAlis.cs" />
     <Compile Include="Menu.cs" />
+    <Compile Include="Minigame.cs" />
     <Compile Include="OyunTemel.cs" />
     <Compile Include="Ozellik.cs" />
     <Compile Include="PetStat.cs" />

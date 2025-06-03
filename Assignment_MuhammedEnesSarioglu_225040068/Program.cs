@@ -14,17 +14,24 @@ public class Program
         while (true)
         {
             Console.Clear();
-            Console.WriteLine("Ana Menü");
-            Console.WriteLine("1. Yeni Oyun");
-            Console.WriteLine("2. Save Dosyasını Yükle");
+            Console.WriteLine("--> MAIN MENU <--");
+            Console.WriteLine("\n1. New Game");
+            Console.WriteLine("2. Load Game");
             Console.WriteLine("3. Credits");
-            Console.WriteLine("4. Çıkış");
-            Console.Write("Seçim: ");
+            Console.WriteLine("4. Exit the Game");
+            Console.Write("Your choice: ");
             string secim = Console.ReadLine();
 
             if (secim == "1") await oyun.YeniOyun();
             else if (secim == "2") await oyun.KayitliOyunuYukle();
-            else if (secim == "3") Console.WriteLine("Hazırlayan: Muhammed Enes Sarıoğlu - 225040068 Devam etmek için bir tuşa basın."); 
+            else if (secim == "3")
+            {
+                Console.WriteLine("Project Owner: Muhammed Enes Sarıoğlu - 225040068");
+
+                Console.WriteLine("Thanks to Onur Hoca, my friends and ChatGPT for their help.");
+
+
+            }
             else if (secim == "4") break;
             Console.ReadKey();
         }

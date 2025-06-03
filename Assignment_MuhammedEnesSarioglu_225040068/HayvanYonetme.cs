@@ -16,7 +16,7 @@ public class HayvanYonetme
     {
         if (hayvanlar.Count == 0)
         {
-            Console.WriteLine("Hiç hayvanınız yok.");
+            Console.WriteLine("You don't have any animals.");
             return;
         }
 
@@ -33,7 +33,7 @@ public class HayvanYonetme
             h.StatAzalt();
             if (!h.CanliMi())
             {
-                Console.WriteLine($"{h.Isim} hayatını kaybetti. Allah rahmet eylesin.");
+                Console.WriteLine($"{h.Isim} passed away. God rest his soul.");
                 hayvanlar.Remove(h);
             }
         }

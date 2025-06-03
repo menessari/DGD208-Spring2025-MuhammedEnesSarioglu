@@ -41,6 +41,6 @@ public class Hayvan
 
     public override string ToString()
     {
-        return $"{Isim} - Tür: {Tur}, Hunger: {Hunger}, Sleep: {Sleep}, Fun: {Fun}";
+        return $"{Isim} - Type: {Tur}, Hunger: {Hunger}, Sleep: {Sleep}, Fun: {Fun}";
     }
 }
