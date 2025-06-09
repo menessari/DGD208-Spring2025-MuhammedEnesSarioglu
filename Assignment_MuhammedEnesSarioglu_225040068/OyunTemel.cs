@@ -12,12 +12,16 @@ public class OyunTemel
     private Save kayit = new Save();
     private Kumarhane kumarhane;
     private Minigame minigame;
+    private EndGame endGame;
+    private IntroStory introStory;
 
     private int[] fiyatlar = { 150, 1050, 1325, 1525, 2625, 3875 };
     private int[] gelirler = { 10, 15, 22, 25, 45, 100 };
 
     public async Task YeniOyun()
     {
+        introStory = new IntroStory();
+        introStory.ShowIntro();
         await OyunuBaslat();
     }
 
@@ -35,6 +39,7 @@ public class OyunTemel
         statlar = new Statlar(hayvanYonetme, ozellik);
         kumarhane = new Kumarhane(ozellik);
         minigame = new Minigame(ozellik);
+        endGame = new EndGame(ozellik);
         _ = statlar.Baslat();
         ozellik.Baslat();
 
@@ -42,14 +47,14 @@ public class OyunTemel
         {
             Console.Clear();
             Console.WriteLine(ozellik.SureGoster());
-            Console.WriteLine("\n--> ANIMAL FORTUNE <--");
-            Console.WriteLine("\n1. Buy Animal");
-            Console.WriteLine("2. Your Animals");
+            Console.WriteLine("1. Buy Animal");
+            Console.WriteLine("2. View Animals");
             Console.WriteLine("3. Market");
             Console.WriteLine("4. Casino");
-            Console.WriteLine("5. Minigames");
-            Console.WriteLine("6. Save Game");
-            Console.WriteLine("7. Return to Main Menu");
+            Console.WriteLine("5. Minigame");
+            Console.WriteLine("6. Save the Game");
+            Console.WriteLine("7. Secure the Fortune");
+            Console.WriteLine("8. Return to Main Menu");
             Console.Write("Your choice: ");
             string sec = Console.ReadLine();
 
@@ -67,7 +72,19 @@ public class OyunTemel
             else if (sec == "4") kumarhane.Ac();
             else if (sec == "5") minigame.MinigameGir();
             else if (sec == "6") kayit.Kaydet(hayvanYonetme.hayvanlar, ozellik.Para, ozellik.SureGosterTimeSpan());
-            else if (sec == "7") break;
+            else if (sec == "7")
+            {
+                if (ozellik.Para >= 100000)
+                {
+                    endGame.ShowEndGame();
+                }
+                else
+                {
+                    Console.WriteLine("You don't have enough money to finish the game.");
+                    Console.ReadKey();
+                }
+            }
+            else if (sec == "8") break;
         }
 
         statlar.Durdur();

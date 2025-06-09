@@ -46,9 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EndGame.cs" />
     <Compile Include="Hayvanlar.cs" />
     <Compile Include="HayvanSatinAl.cs" />
     <Compile Include="HayvanYonetme.cs" />
+    <Compile Include="IntroStory.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="ItemDatabase.cs" />
     <Compile Include="ItemType.cs" />
